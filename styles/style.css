@@ -1,33 +1,114 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    background-color: #5a5353;
-    color: whitesmoke;
+    background-color: rosybrown;
+    color: white;
+    font-family: Arial, sans-serif;
 }
-.imgContainer img {
-    width: 100%;
-    height: 400px;
+
+#btn {
+    display: block;
+    background: #b8caba;
+    color: white;
+    font-size: 16px;
+    padding: 15px 30px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
-.container {
+
+#btn:hover {
+    background: lightcoral;
+}
+
+#joke-container {
+    position: relative;
+    margin: 50px auto;
+    padding: 1em;
+    max-width: 600px;
+    border-radius: 0.25em;
+   background: #a23659;
+    text-align: center;
+
+}
+
+.category,
+.type,
+.setup,
+.delivery,
+.lang,
+.safe {
+    margin: 10px;
+}
+
+.setup {
+    color: white;
+}
+
+.delivery {
+    color: #e1e1e1;
+}
+
+.flags {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    list-style: none;
 }
 
-.flight {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    margin-top: 30px;
-    padding: 0 20px;
+.flags li {
+    background: #333;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.flight.title {
-    font-weight: bolder;
+.flags li:hover {
+    background: yellowgreen;
+}
+
+.flags li.true {
+    display: inline-block;
+    width: 41px;
+    height: 10px;
+    background: #97010e;
+    border-radius: 10%;
+    margin-right: 10px;
+}
+.flags li.false {
+    display: inline-block;
+    width: 41px;
+    height: 10px;
+    background: green;
+    border-radius: 10%;
+    margin-right: 10px;
+}
+
+.lang {
+    font-family: cursive;
+    font-size: 2rem;
+}
+.safe {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: lightcoral;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.unsafe {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #97010e;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.hide {
+    display: none;
 }
